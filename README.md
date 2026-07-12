@@ -3,7 +3,7 @@
 웹디자이너 김주연의 개인 포트폴리오 웹사이트입니다.
 디자인부터 퍼블리싱까지 직접 작업했으며, 프레임워크 없이 **HTML/CSS/JavaScript**로만 제작했습니다.
 
-🔗 **[사이트 바로가기]([https://your-domain.com](https://new-portfolio-navy-one.vercel.app/)** ← 배포 후 실제 주소로 교체해주세요
+🔗 **[사이트 바로가기]([https://new-portfolio-navy-one.vercel.app/](https://new-portfolio-navy-one.vercel.app/)** ← 배포 후 실제 주소로 교체해주세요
 
 ---
 
