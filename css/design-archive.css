@@ -11,8 +11,8 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 17px;
+    font-weight: 400;
     color: var(--color-muted);
     margin-bottom: 40px;
     transition: color 0.2s ease;
@@ -23,10 +23,10 @@
 }
 
 .archive-title {
-    font-family: var(--font-display);
+    font-family: var(--font-body);
     font-weight: 800;
     font-size: clamp(32px, 4.5vw, 52px);
-    margin-bottom: 48px;
+    margin-bottom: 30px;
     display: flex;
     align-items: baseline;
     gap: 14px;
@@ -36,7 +36,7 @@
 .archive-title span {
     font-family: var(--font-body);
     font-weight: 500;
-    font-size: 15px;
+    font-size: 17px;
     color: var(--color-muted);
 }
 

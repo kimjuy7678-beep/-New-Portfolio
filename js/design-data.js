@@ -1,14 +1,11 @@
-// 디자인 아카이브 데이터 — DesignData.ts에서 그대로 옮김
-// 참고: 원본 데이터에 id:4가 두 항목("관악청년네트워크", "NaturalMade")에 중복되어 있어서
-// 1~9로 순서대로 다시 번호를 매겼어요 (React key 중복 경고 방지 + 모달 렌더링 안정성 확보).
 const DESIGN_DATA = [
     {
         id: 1,
         title: '주민 설문조사 웹/모바일 디자인',
         img: [
-            '/images/survey/survey01.png',
-            '/images/survey/survey02.png',
-            '/images/survey/survey03.png',
+            'images/design/survey/survey01.png',
+            'images/design/survey/survey02.png',
+            'images/design/survey/survey03.png',
         ],
         category: 'UI/UX디자인',
         desc: [
@@ -22,11 +19,11 @@ const DESIGN_DATA = [
         id: 2,
         title: '포천시 강우/강수 데이터 시각화 사이트(시안)',
         img: [
-            '/images/pochen/pochen01.png',
-            '/images/pochen/pochen02.png',
-            '/images/pochen/pochen03.png',
-            '/images/pochen/pochen04.png',
-            '/images/pochen/pochen05.png',
+            'images/design/pochen/pochen01.png',
+            'images/design/pochen/pochen02.png',
+            'images/design/pochen/pochen03.png',
+            'images/design/pochen/pochen04.png',
+            'images/design/pochen/pochen05.png'
         ],
         category: 'UI/UX디자인(시안작업)',
         desc: [
@@ -39,9 +36,9 @@ const DESIGN_DATA = [
         id: 3,
         title: '(주)사이트큐빅 브랜드 아이덴티티(BI) 디자인',
         img: [
-            '/images/sitecubic/sitecubic01.jpg',
-            '/images/sitecubic/sitecubic02.png',
-            '/images/sitecubic/sitecubic03.jpg',
+            'images/design/sitecubic/sitecubic01.jpg',
+            'images/design/sitecubic/sitecubic02.png',
+            'images/design/sitecubic/sitecubic03.jpg',
         ],
         category: 'BI디자인',
         desc: [
@@ -55,9 +52,9 @@ const DESIGN_DATA = [
         id: 4,
         title: '관악청년네트워크 프로젝트 배너&포스터 디자인',
         img: [
-            '/images/gwanak/gwanak01.jpg',
-            '/images/gwanak/gwanak02.jpg',
-            '/images/gwanak/gwanak03.jpg',
+            'images/design/gwanak/gwanak01.jpg',
+            'images/design/gwanak/gwanak02.jpg',
+            'images/design/gwanak/gwanak03.jpg',
         ],
         category: '홍보물디자인',
         desc: [
@@ -69,7 +66,7 @@ const DESIGN_DATA = [
     {
         id: 5,
         title: 'NaturalMade 브랜딩 & UI/UX 디자인',
-        img: ['/images/natural/natural01.png', '/images/natural/natural02.png'],
+        img: ['images/design/natural/natural01.png', 'images/design/natural/natural02.png'],
         category: 'UI/UX디자인',
         desc: [
             "천연 화장품 브랜드 통합 브랜딩 및 UX/UI 설계: '자연 유래 성분'이라는 브랜드 컨셉에 맞춰 브랜드 아이덴티티(BI) 구축부터 패키지 디자인, 디지털 플랫폼 UX/UI까지 통합적인 브랜드 경험을 설계했습니다.",
@@ -80,12 +77,12 @@ const DESIGN_DATA = [
         id: 6,
         title: '[대한민국디자인전람회 은상 수상작] 예화, 색각이상자들을 위한 라벨&패키지 디자인',
         img: [
-            '/images/yewha/yewha01.jpg',
-            '/images/yewha/yewha02.jpg',
-            '/images/yewha/yewha03.jpg',
-            '/images/yewha/yewha04.jpg',
-            '/images/yewha/yewha05.jpg',
-            '/images/yewha/yewha06.jpg',
+            'images/design/yewha/yewha01.jpg',
+            'images/design/yewha/yewha02.jpg',
+            'images/design/yewha/yewha03.jpg',
+            'images/design/yewha/yewha04.jpg',
+            'images/design/yewha/yewha05.jpg',
+            'images/design/yewha/yewha06.jpg',
         ],
         category: '패키지디자인',
         desc: [
@@ -99,9 +96,9 @@ const DESIGN_DATA = [
         id: 7,
         title: '첫 선을 보이다 - 졸업전시 홍보 포스터',
         img: [
-            '/images/school/school01.jpg',
-            '/images/school/school02.jpg',
-            '/images/school/school03.jpg',
+            'images/design/school/school01.jpg',
+            'images/design/school/school02.jpg',
+            'images/design/school/school03.jpg',
         ],
         category: '편집디자인',
         desc: [
@@ -114,10 +111,10 @@ const DESIGN_DATA = [
         id: 8,
         title: '수다쟁이 슈새',
         img: [
-            '/images/susae/susae01.jpg',
-            '/images/susae/susae02.jpg',
-            '/images/susae/susae03.jpg',
-            '/images/susae/susae04.jpg',
+            'images/design/susae/susae01.jpg',
+            'images/design/susae/susae02.jpg',
+            'images/design/susae/susae03.jpg',
+            'images/design/susae/susae04.jpg',
         ],
         category: '캐릭터디자인',
         desc: [
@@ -130,9 +127,9 @@ const DESIGN_DATA = [
         id: 9,
         title: '송사넷 홍보 책자 & 리플렛 디자인',
         img: [
-            '/images/songpa/songpa01.png',
-            '/images/songpa/songpa02.jpeg',
-            '/images/songpa/songpa03.jpeg',
+            'images/design/songpa/songpa01.png',
+            'images/design/songpa/songpa02.jpeg',
+            'images/design/songpa/songpa03.jpeg',
         ],
         category: '편집디자인',
         desc: [
