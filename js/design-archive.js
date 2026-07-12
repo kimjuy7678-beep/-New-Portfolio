@@ -78,7 +78,7 @@ function closeModal() {
     imageWrap.style.height = '';
 }
 
-// ===== 이미지 최대 크기에 맞춰 모달 박스 사이즈 계산 (React의 useEffect 로직 그대로) =====
+// ===== 이미지 최대 크기에 맞춰 모달 박스 사이즈 계산 =====
 function fitImageBox(imgList) {
     let loadedCount = 0;
     let maxWidth = 0;
@@ -129,7 +129,6 @@ function changeImage(newIndex) {
     imgFade.classList.remove('fade-out');
     imgFade.style.transitionDuration = `${FADE_DURATION}ms`;
 
-    // 다음 프레임에 fade-out 클래스를 붙여야 transition이 실제로 재생됨
     requestAnimationFrame(() => {
         requestAnimationFrame(() => {
             imgFade.classList.add('fade-out');

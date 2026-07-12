@@ -166,7 +166,6 @@ button {
     align-items: stretch;
 }
 
-/* --- left: greeting + PORT FOLIO --- */
 .hero__left {
     display: flex;
     flex-direction: column;
@@ -187,7 +186,6 @@ button {
     letter-spacing: -0.02em;
 }
 
-/* --- right: title + badge slot + CTA --- */
 .hero__right {
     display: flex;
     flex-direction: column;
@@ -209,7 +207,6 @@ button {
     }
 }
 
-/* --- "WORKS"의 O 위에 얹는 애니메이션 표정 --- */
 .hero__face-wrap {
     position: relative;
     display: inline-block;
@@ -350,7 +347,6 @@ button {
     padding: 0 28px;
 }
 
-/* --- left: greeting / highlight / character + bubbles --- */
 .about__greeting {
     font-size: 100px;
     display: flex;
@@ -415,7 +411,6 @@ button {
     right: 4%;
 }
 
-/* --- right: info blocks --- */
 .about__details {
     margin-top: 100px;
 }
@@ -483,7 +478,6 @@ button {
     color: var(--color-muted);
 }
 
-/* --- tool icons: infinite left-scrolling marquee --- */
 .tools-marquee {
     position: relative;
     width: 100vw;
@@ -568,7 +562,6 @@ button {
     flex-direction: column;
 }
 
-/* --- full-bleed background photo + color tint --- */
 .project__bg {
     position: absolute;
     inset: 0;
@@ -576,7 +569,6 @@ button {
     background-size: cover;
     background-position: center;
     background-color: rgba(0, 0, 0, 0.1);
-    /* 이미지 없을 때도 톤이 비게 안 보이도록 */
 }
 
 .project__overlay {
@@ -585,7 +577,6 @@ button {
     z-index: 1;
 }
 
-/* --- 01 / RESPONSIVE WEB corner labels --- */
 .project__number {
     position: relative;
     z-index: 2;
@@ -608,7 +599,6 @@ button {
     opacity: 0.75;
 }
 
-/* --- centered title + tagline --- */
 .project__header {
     position: relative;
     z-index: 2;
@@ -640,7 +630,6 @@ button {
     letter-spacing: 0.02em;
 }
 
-/* --- floating preview card + info, side by side --- */
 .project__content {
     position: relative;
     z-index: 2;
@@ -714,7 +703,6 @@ button {
     transform: translateY(-3px);
 }
 
-/* --- DESIGN (05) section keeps its own simpler centered layout --- */
 .project__inner {
     max-width: 640px;
     margin: 0 auto;
@@ -776,9 +764,6 @@ button {
     opacity: 0.85;
 }
 
-/* --- palette per project (배경 사진 위에 얹는 톤) --- */
-/* 기존에 누락되어 있던 기본 배경/텍스트색 규칙 — 이게 없으면 텍스트가
-   기본 어두운 색(--color-text)으로 나와서 Figma 시안과 달라 보였어요 */
 .project-aerher {
     background: var(--aerher-bg-1);
     color: var(--aerher-text);
@@ -1182,7 +1167,6 @@ button {
     }
 }
 
-/* Respect reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;

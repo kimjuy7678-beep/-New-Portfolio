@@ -33,11 +33,6 @@ if ('IntersectionObserver' in window) {
     });
 }
 
-// ===== 툴 아이콘 무한 슬라이드 =====
-// 세트를 그냥 2번만 반복하면, 화면이 넓을 때 세트 하나의 실제 폭이
-// 화면 폭보다 좁아져서 콘텐츠가 다 지나간 뒤 빈 화면이 보이다가
-// 다시 처음으로 "점프"하는 것처럼 보임. 화면 폭에 맞춰 세트를
-// 충분히 복제해서, 어떤 화면에서도 끊김 없이 흐르도록 함.
 (function setupToolsMarquee() {
     const marquee = document.querySelector('.tools-marquee');
     const track = document.querySelector('.tools-marquee__track');
@@ -50,7 +45,6 @@ if ('IntersectionObserver' in window) {
         const oneSetWidth = originalList.scrollWidth;
         if (!containerWidth || !oneSetWidth) return;
 
-        // 한쪽 절반(half)이 화면 폭보다 확실히 넓어지도록 필요한 반복 횟수 계산
         const repeatsPerHalf = Math.max(1, Math.ceil(containerWidth / oneSetWidth) + 1);
 
         track.innerHTML = '';
@@ -66,9 +60,6 @@ if ('IntersectionObserver' in window) {
             }
         }
 
-        // 속도(초당 이동 픽셀)를 항상 일정하게 유지 — 복제 개수가 늘어나도
-        // 이동해야 할 거리에 맞춰 애니메이션 시간을 같이 늘려서 체감 속도를 고정함.
-        // 숫자를 낮추면 더 느리게, 높이면 더 빠르게 움직임.
         const PIXELS_PER_SECOND = 40;
         const halfWidth = track.scrollWidth / 2;
         const duration = Math.max(8, halfWidth / PIXELS_PER_SECOND);
@@ -76,7 +67,6 @@ if ('IntersectionObserver' in window) {
     }
 
     buildMarquee();
-    // 이미지가 아직 로드되지 않은 시점엔 폭 계산이 부정확할 수 있어 로드 후 재계산
     window.addEventListener('load', buildMarquee);
 
     let resizeTimer;
@@ -139,7 +129,7 @@ if ('IntersectionObserver' in window) {
     });
 })();
 
-// ===== 전화번호 클릭 — 번호 복사 + 알림 (모바일에서는 tel: 기본 동작으로 전화 앱도 같이 열림) =====
+// ===== 전화번호 클릭 — 번호 복사 + 알림 =====
 (function setupPhoneLink() {
     const link = document.getElementById('phoneLink');
     if (!link) return;
@@ -160,8 +150,6 @@ if ('IntersectionObserver' in window) {
     }
 
     link.addEventListener('click', (e) => {
-        // 데스크탑에서는 tel: 링크가 "앱 선택" 팝업을 띄우니 막고 복사만 함.
-        // 모바일(터치 기기)에서는 기본 동작을 그대로 둬서 전화 앱이 열리게 함.
         const isMobile = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
         if (!isMobile) {
             e.preventDefault();
