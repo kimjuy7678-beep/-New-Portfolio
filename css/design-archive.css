@@ -1,0 +1,301 @@
+/* ==========================================================================
+   DESIGN ARCHIVE PAGE
+   ========================================================================== */
+.design-archive {
+    max-width: var(--about-max-width);
+    margin: 0 auto;
+    padding: 60px 28px 120px;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-muted);
+    margin-bottom: 40px;
+    transition: color 0.2s ease;
+}
+
+.back-btn:hover {
+    color: var(--color-text);
+}
+
+.archive-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(32px, 4.5vw, 52px);
+    margin-bottom: 48px;
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.archive-title span {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--color-muted);
+}
+
+/* --- masonry grid (CSS columns, no JS library needed) --- */
+.masonry-grid {
+    column-count: 3;
+    column-gap: 20px;
+}
+
+.grid-item {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.grid-item-inner {
+    position: relative;
+}
+
+.grid-item-inner img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+
+.grid-item:hover .grid-item-inner img {
+    transform: scale(1.05);
+}
+
+.grid-item-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.15) 55%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.grid-item:hover .grid-item-overlay,
+.grid-item:focus-visible .grid-item-overlay {
+    opacity: 1;
+}
+
+.grid-item-overlay .category {
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 4px;
+}
+
+.grid-item-overlay .title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.4;
+}
+
+/* --- modal --- */
+.design-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 10, 12, 0.72);
+    backdrop-filter: blur(6px);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.design-modal-backdrop[hidden] {
+    display: none;
+}
+
+.design-modal {
+    background: var(--color-bg);
+    border-radius: 20px;
+    max-width: 720px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 20px 20px 32px;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 5;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.modal-close-btn:hover {
+    transform: scale(1.08);
+}
+
+.modal-image-wrap {
+    position: relative;
+    margin: 0 auto 24px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #f4f1ec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 240px;
+}
+
+.modal-img-base,
+.modal-fade-img {
+    max-width: 100%;
+    max-height: 70vh;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.modal-fade-img {
+    position: absolute;
+    inset: 0;
+    opacity: 1;
+    transition-property: opacity;
+    transition-timing-function: ease;
+}
+
+.modal-fade-img.fade-out {
+    opacity: 0;
+}
+
+.modal-fade-img[hidden] {
+    display: none;
+}
+
+.modal-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+.modal-arrow:hover {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.modal-arrow[hidden] {
+    display: none;
+}
+
+.modal-arrow-left {
+    left: 14px;
+}
+
+.modal-arrow-right {
+    right: 14px;
+}
+
+.modal-image-count {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+.modal-image-count[hidden] {
+    display: none;
+}
+
+.modal-info {
+    padding: 0 8px;
+}
+
+.modal-info .category {
+    display: inline-block;
+    font-size: 11px;
+    tracking: 0.04em;
+    color: var(--color-muted);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    padding: 4px 12px;
+    margin-bottom: 12px;
+}
+
+.modal-info .title {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.description-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.description-list li {
+    font-family: var(--font-desc);
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--color-muted);
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media (max-width: 900px) {
+    .masonry-grid {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 560px) {
+    .masonry-grid {
+        column-count: 1;
+    }
+
+    .design-modal {
+        padding: 16px 16px 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .modal-fade-img,
+    .grid-item-inner img,
+    .grid-item-overlay {
+        transition: none;
+    }
+}

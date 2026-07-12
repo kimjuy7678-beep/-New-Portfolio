@@ -1,0 +1,24 @@
+/* SB Aggro — 배포처: 눈누(noonnu.cc), 저작권: 샌드박스 네트워크
+   상업적 사용 가능 (무료), 재판매만 금지. 자세한 라이선스는
+   https://noonnu.cc/font_page/738 참고 */
+
+@font-face {
+    font-family: 'SB Aggro';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SB Aggro';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SB Aggro';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}

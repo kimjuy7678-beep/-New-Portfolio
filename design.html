@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Archive | 김주연 포트폴리오</title>
+    <meta name="description" content="김주연의 디자인 아카이브입니다." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="css/sb-aggro.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/design-archive.css" />
+</head>
+
+<body>
+
+    <div class="design-archive">
+        <a href="index.html#projects" class="back-btn">← 돌아가기</a>
+
+        <h2 class="archive-title">Design Archive <span>디자인 아카이브</span></h2>
+
+        <div class="masonry-grid" id="masonryGrid"></div>
+
+        <!-- 모달 -->
+        <div class="design-modal-backdrop" id="modalBackdrop" hidden>
+            <div class="design-modal" id="designModal">
+                <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="닫기">✕</button>
+
+                <div class="modal-image-wrap" id="modalImageWrap">
+                    <button type="button" class="modal-arrow modal-arrow-left" id="modalPrevBtn"
+                        aria-label="이전 이미지">‹</button>
+
+                    <img src="" alt="" class="modal-img-base" id="modalImgBase" />
+                    <img src="" alt="" class="modal-fade-img" id="modalFadeImg" hidden />
+
+                    <button type="button" class="modal-arrow modal-arrow-right" id="modalNextBtn"
+                        aria-label="다음 이미지">›</button>
+
+                    <div class="modal-image-count" id="modalImageCount"></div>
+                </div>
+
+                <div class="modal-info">
+                    <span class="category" id="modalCategory"></span>
+                    <h3 class="title" id="modalTitle"></h3>
+                    <ul class="description-list" id="modalDescList"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/design-data.js"></script>
+    <script src="js/design-archive.js"></script>
+</body>
+
+</html>
